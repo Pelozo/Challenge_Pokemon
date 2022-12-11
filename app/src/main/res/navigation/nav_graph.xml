@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="net.pelozo.poketeams_challenge.modules.login.view.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_LoginFragment_to_RegionListFragment"
+            app:destination="@id/RegionListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RegionListFragment"
+        android:name="net.pelozo.poketeams_challenge.modules.regionList.view.RegionListFragment"
+        tools:layout="@layout/fragment_region_list">
+
+        <action
+            android:id="@+id/action_RegionListFragment_to_TeamListFragment"
+            app:destination="@id/TeamListFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/TeamListFragment"
+        android:name="net.pelozo.poketeams_challenge.modules.teamList.view.TeamListFragment"
+        tools:layout="@layout/fragment_team_list">
+
+        <argument
+            android:name="region"
+            app:argType="net.pelozo.domain.Region"/>
+
+        <action
+            android:id="@+id/action_TeamListFragment_to_AddTeamFragment"
+            app:destination="@id/AddTeamFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/AddTeamFragment"
+        android:name="net.pelozo.poketeams_challenge.modules.addTeam.view.AddTeamFragment"
+        tools:layout="@layout/fragment_add_team">
+
+        <argument
+            android:name="region"
+            app:argType="string"/>
+
+        <argument
+            android:name="team"
+            app:argType="net.pelozo.domain.Team"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+
+        <action
+            android:id="@+id/action_AddTeamFragment_to_SelectPokemonFragment"
+            app:destination="@id/SelectPokemonFragment" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/SelectPokemonFragment"
+        android:name="net.pelozo.poketeams_challenge.modules.selectPokemon.view.SelectPokemonFragment"
+        tools:layout="@layout/fragment_select_pokemon">
+        <argument
+            android:name="region"
+            app:argType="string"/>
+    </fragment>
+
+
+</navigation>

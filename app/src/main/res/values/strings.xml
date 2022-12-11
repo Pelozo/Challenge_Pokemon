@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">poketeams_challenge</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <!-- ... -->
+    <string name="facebook_application_id" translatable="false">563864908887102</string>
+    <string name="regions">Regions</string>
+    <string name="teams">Teams</string>
+    <string name="create_team">Create team</string>
+    <string name="team_name">Team Name</string>
+    <string name="description">Description</string>
+    <string name="pokemons">Pokemons (%1$s)</string>
+    <string name="select_pokemon">Select pokemon</string>
+    <string name="add">Add</string>
+    <string name="add_pokemon">Add pokemon</string>
+
+    <string name="error_team_name_empty">Team name cannot be empty</string>
+    <string name="error_team_pokemon_size">A minimum of 3 pokemon is required</string>
+    <string name="remove_team">Remove team</string>
+    <string name="edit_team">Edit team</string>
+    <string name="all">All</string>
+    <string name="empty_teams">No teams yet! Try adding some!</string>
+</resources>
